@@ -1,4 +1,4 @@
-package com.leviewprivate;
+package com.hsllany.rxlearn;
 
 import org.junit.Test;
 import rx.Observable;
