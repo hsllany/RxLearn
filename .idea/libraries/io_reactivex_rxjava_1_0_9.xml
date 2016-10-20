@@ -7,6 +7,8 @@
     <JAVADOC>
       <root url="jar://$MAVEN_REPOSITORY$/io/reactivex/rxjava/1.0.9/rxjava-1.0.9-javadoc.jar!/" />
     </JAVADOC>
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ideaLibSources/rxjava-1.0.9-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

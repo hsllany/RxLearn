@@ -6,7 +6,7 @@ import rx.Subscriber;
 
 public class Main {
 
-    static String[] sTestStr;
+    public static String[] sTestStr;
 
     static {
         sTestStr = new String[20];
@@ -15,13 +15,13 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) {
-
+    public static void main(String... args){
+        helloworld();
     }
 
     @Test
-    public static void helloworld(String... msgs) {
-        Observable.from(msgs).subscribe(new Subscriber<String>() {
+    public static void helloworld() {
+        Observable.from(sTestStr).subscribe(new Subscriber<String>() {
             @Override
             public void onCompleted() {
                 System.out.println("done");
@@ -34,9 +34,15 @@ public class Main {
 
             @Override
             public void onNext(String s) {
-                System.out.println(s);
+                System.out.println(Thread.currentThread() + s);
+
             }
         });
+
+        for (int i = 0; i < 10; i++) {
+            System.out.println("lalala" + i + Thread.currentThread());
+        }
+
     }
 
     @Test
